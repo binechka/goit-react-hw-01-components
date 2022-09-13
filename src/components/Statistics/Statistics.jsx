@@ -1,15 +1,15 @@
-
+import css from "./Statistics.modules.css"
 
 const Statistics = (props) => {
-    return <section class="statistics">
-        {props.title && <h2 class="title">Upload stats</h2> }
+    return <section className="css-statistics">
+        {props.title && <h2 className="css-title">Upload stats</h2> }
   {/* <h2 class="title">Upload stats</h2> */}
 
-        <ul class="stat-list">
+        <ul className="css-statList">
             {props.stats.map(stat => {
-                return <li key={stat.id} class="item">
-      <span class="label">{stat.label}</span>
-                <span class="percentage"> { stat.percentage}</span>
+                return <li key={stat.id} className="css-item">
+      <span className="css-label">{stat.label}</span>
+                <span className="css-percentage"> { stat.percentage}</span>
     </li>
   
             })}
