@@ -13,12 +13,14 @@ export const App = () => {
       style={{
         height: '100vh',
         display: 'flex',
+        gap:"40px",
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
         color: '#010101',
-        alightItmes: "space-between",
-        flexDirection:"column"
+        backgroundColor: "#F8A8EA"
+        // alightItmes: "space-between",
+        //flexDirection:"column"
       }}
     >
       <Profile username={user.username}

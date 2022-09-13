@@ -1,36 +1,42 @@
+import PropTypes from "prop-types"
+import css from "./Profile.module.css"
 
-import css from "./Profile.modules.css"
-console.log(css);
-const Profile = (props) => {
-    return <div className="css">
-  <div className="css-descr">
+const Profile = ({avatar,username, tag, location, stats}) => {
+    return <div className={css.block}>
+  <div className={css.descr}>
     <img
-      src={props.avatar}
+      src={avatar}
       alt="User avatar"
-      className="css-avatar"
+      className={css.avatar}
     />
-            <p className="css-username"> { props.username}</p>
-            <p className="css-tag">{ props.tag}</p>
-            <p className="css-location">{ props.location}</p>
+            <p className={css.username}> { username}</p>
+            <p className={css.tag}>{ tag}</p>
+            <p className={css.location}>{ location}</p>
   </div>
 
-  <ul className="css-stats">
-    <li className="css-item">
-      <span className="css-label">Followers</span>
-                <span class="css-quantity"> { props.stats.followers}</span>
+  <ul className={css.stats}>
+    <li className={css.item}>
+          <span className={css.label}>Followers</span>
+                <span className={css.quantity}> { stats.followers}</span>
     </li>
-    <li className="css-item">
-      <span className="css-label">Views</span>
-      <span className="css-quantity">{ props.stats.views}</span>
+    <li className={css.item}>
+      <span className={css.label}>Views</span>
+      <span className={css.quantity}>{ stats.views}</span>
     </li>
-    <li className="css-item">
-      <span className="css-label">Likes</span>
-      <span className="css-quantity">{ props.stats.likes}</span>
+    <li className={css.item}>
+      <span className={css.label}>Likes</span>
+      <span className={css.quantity}>{ stats.likes}</span>
     </li>
   </ul>
 </div>
 }
 
-
+Profile.propTypes = {
+  avatar: PropTypes.string,
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+stats:PropTypes.object,
+}
 
 export default Profile
