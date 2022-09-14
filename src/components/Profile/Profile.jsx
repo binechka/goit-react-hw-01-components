@@ -36,7 +36,12 @@ Profile.propTypes = {
   username: PropTypes.string,
   tag: PropTypes.string,
   location: PropTypes.string,
-stats:PropTypes.object,
+  stats: {
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
+
+},
 }
 
 export default Profile

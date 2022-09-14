@@ -21,7 +21,11 @@ const Statistics = ({stats, title}) => {
 }
 
 Statistics.propTypes = {
-    stats: PropTypes.array,
+    stats: PropTypes.array(PropTypes.shape({
+        id: PropTypes.string,
+        label: PropTypes.string,
+        percentage:PropTypes.number,
+    },)) ,
     title:PropTypes.string,
 }
 
